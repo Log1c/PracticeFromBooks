@@ -1,6 +1,7 @@
-package warburtonLambdas.chapter3;
+package warburtonLambdas.chapter5;
 
 import warburtonLambdas.Artist;
+import warburtonLambdas.chapter3.StringUtil;
 
 import java.util.Comparator;
 import java.util.List;
@@ -17,7 +18,7 @@ public class Quest5 {
 //        toUpperCase();
         Stream<String> names = Stream.of("John Lennon", "Paul McCartney",
                 "George Harrison", "Ringo Starr", "Pete Best", "Stuart Sutcliffe");
-        System.out.println(getLongestNmae(names));
+        System.out.println(getLongestName(names));
     }
 
     private static void toUpperCase() {
@@ -36,7 +37,7 @@ public class Quest5 {
     }
 
     //97
-    public static String getLongestNmae(Stream<String> stream) {
+    public static String getLongestName(Stream<String> stream) {
         return stream.reduce("", StringUtil::LongestName);
     }
 }
